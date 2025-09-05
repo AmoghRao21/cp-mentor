@@ -1,0 +1,14 @@
+{
+  "name": "cp-mentor-extension",
+  "version": "1.0.0",
+  "description": "AI-powered mentoring extension for competitive programming",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "npm run build",
+    "backend": "node backend/mock-server.js",
+    "start": "npm run backend"
+  },
+  "keywords": ["browser-extension", "competitive-programming", "ai-mentor"],
+  "author": "Your Name",
+  "license": "MIT"
+}

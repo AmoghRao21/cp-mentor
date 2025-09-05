@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "CP Mentor",
+  "version": "1.0.0",
+  "description": "AI mentoring for competitive programming problems",
+  
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  
+  "host_permissions": [
+    "https://leetcode.com/*",
+    "https://codeforces.com/*",
+    "http://localhost:3000/*"
+  ],
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": ["content-leetcode.js"]
+    },
+    {
+      "matches": [
+        "https://codeforces.com/problem/*", 
+        "https://codeforces.com/contest/*/problem/*",
+        "https://codeforces.com/problemset/problem/*",
+        "https://codeforces.com/gym/*/problem/*"
+      ],
+      "js": ["content-codeforces.js"]
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CP Mentor"
+  }
+}
