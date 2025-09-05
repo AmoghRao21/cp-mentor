@@ -4,11 +4,23 @@
   "description": "AI-powered mentoring extension for competitive programming",
   "scripts": {
     "build": "node scripts/build.js",
+    "build:prod": "node scripts/build-prod.js",
     "dev": "npm run build",
     "backend": "node backend/mock-server.js",
-    "start": "npm run backend"
+    "start": "npm run backend",
+    "zip": "npm run build:prod && cd dist && zip -r ../cp-mentor-extension-v1.0.0.zip .",
+    "test": "echo 'Tests coming soon'",
+    "lint": "echo 'Linting coming soon'"
   },
-  "keywords": ["browser-extension", "competitive-programming", "ai-mentor"],
-  "author": "Your Name",
-  "license": "MIT"
+  "keywords": ["browser-extension", "competitive-programming", "ai-mentor", "leetcode", "codeforces"],
+  "author": "Amogh Rao <amoghagrao@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AmoghRao21/cp-mentor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AmoghRao21/cp-mentor/issues"
+  },
+  "homepage": "https://cpmentor.dev"
 }
